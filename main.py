@@ -7,8 +7,9 @@ def main():
     player1 = 0
     player2 = 0
     count = 1000
+    verbose = False
     for i in range(count):
-        game = MauMau([RandomPlayer('Player1', verbose=False), RandomPlayer('Player2', verbose=False)], verbose=False)
+        game = MauMau([RandomPlayer('Player1', verbose=verbose), RandomPlayer('Player2', verbose=verbose)], verbose=verbose)
         stats = game.run()
         del game
         print(stats)
